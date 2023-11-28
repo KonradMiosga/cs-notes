@@ -40,6 +40,7 @@ const pageTitle = [
 
 			<footer>
 				{!isHome && <a href="/cs-notes/">home</a>}
+				<p>Alle Angaben ohne Gewähr</p>
 			</footer>
 		</div>
 		<style is:global>
@@ -74,6 +75,10 @@ const pageTitle = [
 				color: inherit;
 				text-decoration: none;
 			}
+
+			footer a {
+					margin-bottom: 1rem;
+				}
 
 			/* Light mode */
 			@media (prefers-color-scheme: light) {
