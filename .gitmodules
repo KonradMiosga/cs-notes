@@ -1,0 +1,3 @@
+[submodule "src/pages"]
+	path = src/pages
+	url = git@github.com:KonradMiosga/studynotes.git
