@@ -19,6 +19,8 @@
         steps:
         - name: Check out your repository using git
           uses: actions/checkout@v3
+          with:
+            submodules: 'true'
 
         - name: Use Node.js 18
           uses: actions/setup-node@v3
