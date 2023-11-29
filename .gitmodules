@@ -1,4 +1,5 @@
 [submodule "src/pages"]
 	path = src/pages
 	url = git@github.com:KonradMiosga/studynotes.git
+	branch = main
 	ignore = dirty
