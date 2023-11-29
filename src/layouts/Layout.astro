@@ -4,6 +4,7 @@ import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
 
 import { SITE_NAME, DESCRIPTION } from "../../src/config";
+import Header from "../components/Header.astro";
 
 interface Props {
 	title: string;
@@ -33,6 +34,7 @@ const pageTitle = [
 		<title>{pageTitle}</title>
 	</head>
 	<body class={`${isHome ? "is-home" : ""}`}>
+		<Header />
 		<div>
 			<main>
 				<slot />
@@ -60,10 +62,15 @@ const pageTitle = [
 				font-family: "JetBrains Mono", system-ui, sans-serif;
 				font-size: 14px;
 				line-height: 1.2rem;
-				background: #13151a;
+				background: #FBFAF5;
+				color: #0e1111;
 				background-size: 224px;
-				color: white;
 			}
+
+			html.dark {
+				background: #0e1111;
+				color: #FBFAF5;
+				}
 			body {
 				margin: 0 auto;
 				width: 100%;
@@ -83,13 +90,6 @@ const pageTitle = [
 					font-style: italic;
 					font-size: 10px;
 				}
-
-			/* Light mode */
-			@media (prefers-color-scheme: light) {
-				html {
-					background: #fff;
-				}
-			}
 
 			/* We want to bump up the font size on touch screens so that tap targets are easier to hit */
 			@media (hover: none) {
