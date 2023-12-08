@@ -8,6 +8,8 @@ export default defineConfig({
         resolve: {
             preserveSymlinks: true
         }
+    },
+    build: {
+        format: 'file'
     }
-
 });
