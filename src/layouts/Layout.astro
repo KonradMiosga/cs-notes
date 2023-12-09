@@ -5,6 +5,7 @@ import "@fontsource/jetbrains-mono/500.css";
 
 import { SITE_NAME, DESCRIPTION } from "../../src/config";
 import Header from "../components/Header.astro";
+import '../styles/global.css';
 
 interface Props {
 	title: string;
@@ -29,7 +30,7 @@ const pageTitle = [
 		<meta charset="UTF-8" />
 		<meta name="description" content={DESCRIPTION} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- <link rel="icon" type="image/svg+xml" href="cs-notes/favicon.svg" /> -->
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
@@ -46,86 +47,6 @@ const pageTitle = [
 				<p>Alle Angaben ohne Gewähr</p>}
 			</footer>
 		</div>
-		<style is:global>
-			<!-- :root { -->
-			<!-- 	--accent: 136, 58, 234; -->
-			<!-- 	--accent-light: 224, 204, 250; -->
-			<!-- 	--accent-dark: 49, 10, 101; -->
-			<!-- 	--accent-gradient: linear-gradient( -->
-			<!-- 		45deg, -->
-			<!-- 		rgb(var(--accent)), -->
-			<!-- 		rgb(var(--accent-light)) 30%, -->
-			<!-- 		white 60% -->
-			<!-- 	); -->
-			<!-- } -->
-
-			html {
-				font-family: "JetBrains Mono", system-ui, sans-serif;
-				font-size: 14px;
-				line-height: 1.2rem;
-				background: #FBFAF5;
-				color: #0e1111;
-				background-size: 224px;
-			}
-
-			html.dark {
-				background: #0e1111;
-				color: #FBFAF5;
-				}
-			body {
-				margin: 0 auto;
-				width: 100%;
-				max-width: 80ch;
-				padding: 1rem;
-				line-height: 1.5;
-			}
-			a {
-				color: inherit;
-				text-decoration: underline;
-			}
-
-			img {
-				max-width: 100%;
-				height: auto;
-			} 
-
-			footer a {
-				margin-bottom: 1rem;
-			}
-			footer p {
-				font-style: italic;
-				font-size: 10px;
-			}
-
-			/* We want to bump up the font size on touch screens so that tap targets are easier to hit */
-			@media (hover: none) {
-				html {
-					font-size: 18px;
-				}
-			}
-			code {
-				font-family:
-					Menlo,
-					Monaco,
-					Lucida Console,
-					Liberation Mono,
-					DejaVu Sans Mono,
-					Bitstream Vera Sans Mono,
-					Courier New,
-					monospace;
-			}
-
-			h1 {
-				font-size: 1.5rem;
-				font-style: italic;
-				font-weight: 500;
-				margin-bottom: 0.5rem;
-			}
-
-			body:not(.is-home) a {
-				text-decoration: underline;
-			}
-		</style>
 	</body>
 </html>
 
