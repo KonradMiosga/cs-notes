@@ -1,16 +1,23 @@
+:root {
+    --bg-color: #141617;
+    --fg-color: #d4be98;
+    --red: #ea6962;
+    --orange: #e78a4e;
+    --yellow: #d8a657;
+    --green: #a9b665;
+    --aqua: #89b482;
+    --blue: #7daea3;
+    --purple: #d3869b;
+}
 html {
     font-family: "JetBrains Mono", system-ui, sans-serif;
-    font-size: 14px;
-    line-height: 1.2rem;
-    background: #FBFAF5;
-    color: #0e1111;
+    font-size: 18px;
+    line-height: 1.5rem;
     background-size: 224px;
+    background: var(--bg-color);
+    color: var(--fg-color);
 }
 
-html.dark {
-    background: #0e1111;
-    color: #FBFAF5;
-}
 body {
     margin: 0 auto;
     width: 100%;
@@ -18,6 +25,11 @@ body {
     padding: 1rem;
     line-height: 1.5;
 }
+
+p strong {
+    color: var(--orange);
+}
+
 a {
     color: inherit;
     text-decoration: underline;
@@ -36,22 +48,17 @@ footer p {
     font-size: 10px;
 }
 
-/* We want to bump up the font size on touch screens so that tap targets are easier to hit */
 @media (hover: none) {
     html {
         font-size: 18px;
     }
 }
-code {
-    font-family:
-        Menlo,
-        Monaco,
-        Lucida Console,
-        Liberation Mono,
-        DejaVu Sans Mono,
-        Bitstream Vera Sans Mono,
-        Courier New,
-    monospace;
+
+pre {
+    padding: 0.5rem;
+    font-family: monospace;
+    background: inherit !important;
+    border: 1px solid #ebdbb2;
 }
 
 h1 {
@@ -59,6 +66,12 @@ h1 {
     font-style: italic;
     font-weight: 500;
     margin-bottom: 0.5rem;
+    color: var(--aqua);
+}
+ h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--yellow);
 }
 
 body:not(.is-home) a {
